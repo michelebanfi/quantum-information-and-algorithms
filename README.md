@@ -6,3 +6,5 @@ Exercises
 - 01 - Bernstein-Vazirani Algorithm
 - 02 - Qubits Arithmetic
 - 03 - Quantum Error Correction
+- 04 - Grover algorithm
+- 05 - Boolean SAT Solver
