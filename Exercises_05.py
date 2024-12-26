@@ -10,6 +10,8 @@ from colorsys import hls_to_rgb
 import re
 from sympy.logic.boolalg import is_cnf, to_cnf
 import math
+from qiskit import transpile
+from qiskit.transpiler.passes import RemoveBarriers
 
 
 # function to plot phases of the states
@@ -172,4 +174,15 @@ co = result.data.meas.get_counts()
 circuit_drawer(qc, output="mpl")
 
 plot_histogram(co)
+plt.show()
+
+qc = RemoveBarriers()(qc)
+
+print(qc.count_ops())
+
+optimized_qc = transpile(qc, optimization_level=3)
+
+print(optimized_qc.count_ops())
+
+circuit_drawer(optimized_qc, output="mpl")
 plt.show()
