@@ -1,3 +1,5 @@
+# THIS CODE IS THE SAME AS THE NOTEBOOK BUT INPLEMTENS DIRECTLY THE ALGORITHM DEVELOPED IN THE NOTEBOOK.
+
 # import libraries
 from qiskit import QuantumCircuit
 from qiskit.visualization import plot_histogram
